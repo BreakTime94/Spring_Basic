@@ -10,3 +10,8 @@
 - 자바빈 관련 추가 학습 (필드 직접 주입, 생성자를 통한 주입, setter를 통한 주입) 예시 학습
 - Spring IOC 관련 개념 추가 학습, AOP 관련 학습(proxy, advice 등 학습) 
 - Advice 관련 적용 시점 및 자바 표준방식 프록시 객체 방법/Component 등록 및 활용방법 학습
+
+### 📅 250718 
+- AOP 관련 복습
+- Aspect 기반 AspectJ 표현식 학습
+- JDBC를 이용한 DB연동 실습 (관련 함수/프로시저 호출 Test) 
