@@ -31,6 +31,15 @@ dependencies {
   testAnnotationProcessor 'org.projectlombok:lombok'
   testImplementation 'org.springframework.boot:spring-boot-starter-test'
   testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+  //Aspect 관련 의존성 주입
+  implementation 'org.springframework:spring-aspects:6.2.8' //얘는 버전 생략하면 최신 버젼을 가져와버린다.
+  runtimeOnly 'org.aspectj:aspectjweaver:1.9.24'
+  runtimeOnly 'org.aspectj:aspectjrt:1.9.24'
+
+  //DB연결 관련
+  implementation 'org.springframework.boot:spring-boot-starter-jdbc:3.4.7'
+  implementation 'org.mariadb.jdbc:mariadb-java-client'
 }
 
 tasks.named('test') {

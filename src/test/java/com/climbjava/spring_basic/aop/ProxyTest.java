@@ -1,17 +1,18 @@
 package com.climbjava.spring_basic.aop;
 
-import com.climbjava.spring_basic.aop.advice.BeforeAdvice;
+import com.climbjava.spring_basic.aop.advice.MyBeforeAdvice;
 import com.climbjava.spring_basic.aop.advice.MyAfterReturn;
+import com.climbjava.spring_basic.aop.pointcut.MySimplePointcut;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.aopalliance.aop.Advice;
 import org.junit.jupiter.api.Test;
-import org.springframework.aop.AfterAdvice;
-import org.springframework.aop.AfterReturningAdvice;
+import org.springframework.aop.PointcutAdvisor;
 import org.springframework.aop.ThrowsAdvice;
+import org.springframework.aop.aspectj.AspectJExpressionPointcut;
 import org.springframework.aop.framework.ProxyFactory;
+import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
@@ -22,11 +23,14 @@ public class ProxyTest {
   @Autowired
   private LoggingAdvice advice;
   @Autowired
-  private BeforeAdvice before;
+  private MyBeforeAdvice before;
   @Autowired
   private MyAfterReturn afterReturn;
   @Autowired
   private ThrowsAdvice throwsAdvice;
+
+  @Autowired
+  private MySimplePointcut pointcut;
 
   private BoardService proxy;
 
@@ -89,5 +93,35 @@ public class ProxyTest {
     }
   }
 
+  @Test
+  public void testAdvisor(){
+    ProxyFactory proxyFactory = new ProxyFactory();
+    proxyFactory.setTarget(boardService);
+
+    // Advisor
+    PointcutAdvisor pointcutAdvisor = new DefaultPointcutAdvisor(pointcut, before);
+    proxyFactory.addAdvisor(pointcutAdvisor);
+
+    proxy = (BoardService) proxyFactory.getProxy();
+
+    proxy.write("제목", "내용");
+    proxy.findBy(3L);
+    proxy.delete(3L);
+
+  }
+
+  @Test
+  public void testAspectj() {
+    AspectJExpressionPointcut pc = new AspectJExpressionPointcut();
+    pc.setExpression("execution(void *.write*(..))");
+    DefaultPointcutAdvisor advisor = new DefaultPointcutAdvisor(pc, before);
+
+    ProxyFactory proxyFactory = new ProxyFactory();
+    proxyFactory.setTarget(boardService);
+    proxyFactory.addAdvisor(advisor);
+    proxy = (BoardService) proxyFactory.getProxy();
+    proxy.write("title", "content");
+    proxy.findBy(3L);
+  }
 
 }
