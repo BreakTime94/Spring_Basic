@@ -1,5 +1,8 @@
 # Spring_Basic
 
+![Spring](https://img.shields.io/badge/Spring-Framework-6DB33F?logo=spring)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen)
+
 ## 공통 🌱 spring_basic 파일 생성 
 ---
 ### 📅 250716 
