@@ -12,13 +12,6 @@ import org.springframework.stereotype.Service;
 @ToString
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
-  @NonNull
-  private Member member;
-
-
-//  MemberServiceImpl(Member member) {
-//    this.member = member;
-//  }
 
   @Override
   public void register(Member member) {
