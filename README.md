@@ -1,6 +1,6 @@
 # Spring_Basic
-![Spring](https://img.shields.io/badge/Spring-Framework-6DB33F?logo=spring&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-6DB33F?logo=springboot&logoColor=white)
+(https://img.shields.io/badge/Spring-#6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+(https://img.shields.io/badge/Spring%20Boot-3.5.3-6DB33F?logo=springboot&logoColor=white)
 
 ## 공통 🌱 spring_basic 파일 생성 
 ---
@@ -16,4 +16,9 @@
 ### 📅 250718 
 - AOP 관련 복습
 - Aspect 기반 AspectJ 표현식 학습
-- JDBC를 이용한 DB연동 실습 (관련 함수/프로시저 호출 Test) 
+- JDBC를 이용한 DB연동 실습 (관련 함수/프로시저 호출 Test)
+
+### 📅 250721
+- ORM 개념과 JPA 개념 학습, 관련 graddle 의존성 추가(Spring Boot Starter Web, Spring Boot Starter Data JPA)
+- Entity, Table ,Id, Generated Value, ManyToOne, OneToMany, JoinColumn 등의 어노테이션 학습
+- Entity를 활용한 영속객체 실습 등
