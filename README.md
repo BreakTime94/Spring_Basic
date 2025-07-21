@@ -1,5 +1,5 @@
 # Spring_Basic
-![Spring](https://img.shields.io/badge/Spring-#6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
 ![SpringBoot](https://img.shields.io/badge/Spring%20Boot-3.5.3-6DB33F?logo=springboot&logoColor=white)
 
 ## 공통 🌱 spring_basic 파일 생성 
