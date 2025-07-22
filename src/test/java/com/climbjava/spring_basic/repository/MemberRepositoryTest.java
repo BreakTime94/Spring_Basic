@@ -23,7 +23,7 @@ public class MemberRepositoryTest {
   @Transactional
   @Rollback(false)
   public void testInsert(){
-    Member member = Member.builder().id("sae").pw("1234").age(20).name("새똥이").build(); //
+    Member member = Member.builder().id("sae").pw("1234").age(32).name("소똥이").build(); //
     memberRepository.save(member);
   }
 

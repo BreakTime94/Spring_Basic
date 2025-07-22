@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member, Long> {
-  void deleteByMemoText(String memoText);
+  //void deleteByMemoText(String memoText);
 }
