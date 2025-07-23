@@ -22,3 +22,9 @@
 - ORM 개념과 JPA 개념 학습, 관련 graddle 의존성 추가(Spring Boot Starter Web, Spring Boot Starter Data JPA)
 - Entity, Table ,Id, Generated Value, ManyToOne, OneToMany, JoinColumn 등의 어노테이션 학습
 - Entity를 활용한 영속객체 실습 등
+
+### 📅 250722
+- SpringJPA Repository 관련 학습 마무리
+- SpringJPA Paging/Sort 학습
+- Query Method (어노테이션, 파라미터 바인딩, 페이징 처리, 배열 리턴 등)
+- 스프링 MVC 내 ThymeLeaf 기초 활용 학습 시작(반복문, 조건문, 인라인 속성, 링크, 숫자 및 날짜 포맷처리, 레이아웃 fragment 등)
