@@ -50,7 +50,7 @@ public class SampleController {
   @GetMapping("ex3")
   public void ex3(){}
 
-  @GetMapping("exLayout1")
+  @GetMapping({"exLayout1", "exLayout2", "exTemplate", "exSidebar"})
   public void exLayout1(Model model){
 
   }
